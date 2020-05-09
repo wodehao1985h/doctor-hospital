@@ -1,0 +1,31 @@
+server:
+  port: 8080
+  undertow:
+    accesslog:
+      # 开启Undertow访问日志
+      enabled: true
+      dir: /data/logs
+logging:
+  level:
+    #root: INFO
+    com.gaoji: INFO
+spring:
+  application:
+    name: demo
+    thymeleaf:
+      mode: LEGACYHTML5
+      cache: false
+      encoding: UTF-8
+      content-type: text/html
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/doctor?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123456
+
+
+mybatis:
+  mapper-locations: classpath*:mybatis/mapper/**/*.xml
+  type-aliases-package: com.doctor
+

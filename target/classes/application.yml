@@ -1,0 +1,37 @@
+server:
+  port: 8080
+  undertow:
+    accesslog:
+      # 开启Undertow访问日志
+      enabled: true
+      dir: /data/logs
+logging:
+  level:
+    #root: INFO
+    com.gaoji: INFO
+spring:
+  application:
+    name: demo
+    thymeleaf:
+      mode: LEGACYHTML5
+      cache: false
+      encoding: UTF-8
+      content-type: text/html
+
+  data:
+    neo4j:
+      uri: bolt://10.8.131.38:7687
+      username: neo4j
+      password: Neo4j@1234#
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://10.8.131.13:3306/cowell_his?useUnicode=true&characterEncoding=UTF-8
+    username: enginer
+    password: Enginer_13
+
+
+mybatis:
+  mapper-locations: classpath*:mybatis/mapper/**/*.xml
+  type-aliases-package: com.gaoji
+
