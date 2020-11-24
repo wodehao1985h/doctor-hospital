@@ -18,20 +18,14 @@ spring:
       encoding: UTF-8
       content-type: text/html
 
-  data:
-    neo4j:
-      uri: bolt://10.8.131.38:7687
-      username: neo4j
-      password: Neo4j@1234#
-
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://10.8.131.13:3306/cowell_his?useUnicode=true&characterEncoding=UTF-8
-    username: enginer
-    password: Enginer_13
+    url: jdbc:mysql://127.0.0.1:3306/doctor?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 123456
 
 
 mybatis:
   mapper-locations: classpath*:mybatis/mapper/**/*.xml
-  type-aliases-package: com.gaoji
+  type-aliases-package: com.doctor.domain
 
